@@ -324,6 +324,71 @@
       border-color: rgba(148,163,184,0.7);
       background: rgba(15,23,42,0.7);
     }
+
+/* ===== ナビゲーションバー ===== */
+.top-nav {
+  position: sticky;      /* スクロールで上固定。固定したくなければ static に。 */
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: -8px -20px 12px;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.98),
+    rgba(30, 64, 175, 0.95)
+  );
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.nav-logo {
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: #e3f2fd;
+}
+
+.nav-links {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-links a {
+  color: #e5e9ff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(191, 219, 254, 0.8);
+}
+
+/* 画面幅が狭いとき */
+@media (max-width: 720px) {
+  .top-nav {
+    padding: 8px 14px;
+    margin: -8px -14px 10px;
+  }
+  .nav-logo {
+    font-size: 0.8rem;
+  }
+  .nav-links {
+    gap: 8px;
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}
+    
   </style>
 </head>
 <body>
